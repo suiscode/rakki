@@ -46,7 +46,7 @@ const Addresses = ({
           level="h2"
           className="flex flex-row text-3xl-regular gap-x-2 items-baseline"
         >
-          Shipping Address
+          Хүргэлтийн хаяг
           {!isOpen && <CheckCircleSolid />}
         </Heading>
         {!isOpen && cart?.shipping_address && (
@@ -84,7 +84,7 @@ const Addresses = ({
               </div>
             )} */}
             <SubmitButton className="mt-6" data-testid="submit-address-button">
-              Continue to delivery
+              Үргэлжлүүлэх
             </SubmitButton>
             <ErrorMessage error={message} data-testid="address-error-message" />
           </div>

@@ -7,8 +7,10 @@ import { StoreRegion } from "@medusajs/types"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import { retrieveCustomer } from "@lib/data/customer"
 
 export default async function Nav() {
+  const customer = await retrieveCustomer().catch(() => null)
   const [regions, locales, currentLocale] = await Promise.all([
     listRegions().then((regions: StoreRegion[]) => regions),
     listLocales(),
@@ -31,7 +33,7 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              Medusa Store
+              Rakki store
             </LocalizedClientLink>
           </div>
 
@@ -42,7 +44,7 @@ export default async function Nav() {
                 href="/account"
                 data-testid="nav-account-link"
               >
-                Account
+                {customer?.phone}
               </LocalizedClientLink>
             </div>
             <Suspense
@@ -52,7 +54,7 @@ export default async function Nav() {
                   href="/cart"
                   data-testid="nav-cart-link"
                 >
-                  Cart (0)
+                  Сагс (0)
                 </LocalizedClientLink>
               }
             >

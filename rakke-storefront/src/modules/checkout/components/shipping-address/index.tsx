@@ -112,7 +112,7 @@ const ShippingAddress = ({
       )}
       <div className="grid grid-cols-2 gap-4">
         <Input
-          label="First name"
+          label="Нэр"
           name="shipping_address.first_name"
           autoComplete="given-name"
           value={formData["shipping_address.first_name"]}
@@ -121,7 +121,7 @@ const ShippingAddress = ({
           data-testid="shipping-first-name-input"
         />
         <Input
-          label="Last name"
+          label="Овог"
           name="shipping_address.last_name"
           autoComplete="family-name"
           value={formData["shipping_address.last_name"]}
@@ -130,7 +130,7 @@ const ShippingAddress = ({
           data-testid="shipping-last-name-input"
         />
         <Input
-          label="Address"
+          label="Хаяг"
           name="shipping_address.address_1"
           autoComplete="address-line1"
           value={formData["shipping_address.address_1"]}
@@ -174,7 +174,7 @@ const ShippingAddress = ({
           data-testid="shipping-country-select"
         /> */}
         <Input
-          label="State / Province"
+          label="Дүүрэг"
           name="shipping_address.province"
           autoComplete="address-level1"
           value={formData["shipping_address.province"]}
@@ -204,7 +204,7 @@ const ShippingAddress = ({
           data-testid="shipping-email-input"
         />
         <Input
-          label="Phone"
+          label="Утасны дугаар"
           name="shipping_address.phone"
           autoComplete="tel"
           value={formData["shipping_address.phone"]}
@@ -213,7 +213,6 @@ const ShippingAddress = ({
           data-testid="shipping-phone-input"
         />
       </div>
-      <h1 onClick={() => console.log(formData)}>hello</h1>
     </>
   )
 }
